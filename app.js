@@ -25,12 +25,15 @@ function createSticker(url, who) {
   honoree.appendChild(sticker);
 }
 
-function clearSticker(honoree) {
-  if (document.images.length) {
-    document.getElementById(honoree).innerHTML = '';
+function clearSticker() {
+  var honoree = document.getElementById('honoree');
+  while (honoree.firstChild){
+    honoree.removeChild(honoree.firstChild);
   }
 }
-  var btn = document.querySelector('button');
-  btn.addEventListener('click', function() {
-    clearSticker('honoree');
-  });
+
+var btn = document.querySelector('button');
+btn.addEventListener('click', function() {
+  clearSticker('honoree');
+  fetchGif(API_KEY, 'g');
+});
