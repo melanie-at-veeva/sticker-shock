@@ -19,12 +19,9 @@ See the [CONTRIBUTING] document.
   [contributors]: https://github.com/melanie-at-veeva/sticker-shock/graphs/contributors
 
 ## License
-sticker-shock is Copyright (c) 2016 Melanie Archer
+sticker-shock is Copyright (c) 2016 Melanie Archer.
+
 It is free software, and may be redistributed
 under the terms specified in the [LICENSE] file.
 
   [LICENSE]: /LICENSE
-
-
-http://api.giphy.com/v1/gifs/random?rating=g&api_key=dc6zaTOxFJmzC
-//
