@@ -5,7 +5,8 @@ Reward your people with motivating GIFs, affectionately chosen at random.
 
 ## Usage
 
-* Install sticker-shock as a Google Sheets add-on
+* Install `sticker-shock` as a Google Sheets add-on
+* Allow `sticker-shock` permissions to run on your spreadsheet
 * Click into a likely empty cell on your spreadsheet
 * Click "Add ons," then the sticker-shock action button
 * Watch with amazement as team morale increases 300%.
