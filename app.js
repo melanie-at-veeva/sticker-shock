@@ -1,12 +1,14 @@
+/* jslint esversion: 6 */
 function fetchGif(api_key, rating) {
   "use strict";
-  var url = "http://crossorigin.me/https://api.giphy.com/v1/gifs/random?rating=" + rating + "&api_key=" + api_key;
-  var xhr = new XMLHttpRequest();
+  let d = (new Date()).getTime();
+  let url = `http://crossorigin.me/https://api.giphy.com/v1/gifs/random?${d}&rating=${rating}&api_key=${api_key}`;
+  let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        var jsonObj = JSON.parse(xhr.responseText);
-        var imageSrc = jsonObj.data.fixed_height_small_url;
+        let jsonObj = JSON.parse(xhr.responseText);
+        let imageSrc = jsonObj.data.fixed_height_small_url;
         createSticker(imageSrc, 'honoree');
       } else {
         return (console.log('error'));
@@ -19,20 +21,20 @@ function fetchGif(api_key, rating) {
 
 function createSticker(url, who) {
   "use strict";
-  var sticker = document.createElement('img');
-  var honoree = document.getElementById(who);
+  let sticker = document.createElement('img');
+  let honoree = document.getElementById(who);
   sticker.setAttribute('src', url);
   honoree.appendChild(sticker);
 }
 
 function clearSticker() {
-  var honoree = document.getElementById('honoree');
+  let honoree = document.getElementById('honoree');
   while (honoree.firstChild){
     honoree.removeChild(honoree.firstChild);
   }
 }
 
-var btn = document.querySelector('button');
+let btn = document.querySelector('button');
 btn.addEventListener('click', function() {
   clearSticker('honoree');
   fetchGif(API_KEY, 'g');
